@@ -25,6 +25,7 @@ public class MyString {
 		System.out.println("replaceFirst " + "Hello World, How are you?".replaceFirst("He", "IT"));
 		System.out.println("equals " + sample.equals("jI"));
 		System.out.println("sample.intern " + sample.intern());
+		System.out.println("contains jI " + sample.contains("are"));
 		
 		
 		
