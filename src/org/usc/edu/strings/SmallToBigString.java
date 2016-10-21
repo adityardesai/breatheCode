@@ -10,7 +10,7 @@ public class SmallToBigString {
 		if (len <= 0 || big == "") {
 			return Boolean.TRUE;
 		} else {
-			for (String word : arr) {
+			for(String word : arr) {
 				if (big.startsWith(word)) {
 					return check(arr, big.substring(word.length()));
 				}
