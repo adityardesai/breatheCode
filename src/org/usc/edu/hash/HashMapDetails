@@ -1,0 +1,22 @@
+1. Usage of hashCode() and equals()
+hashCode() method is used to get a unique integer for given object. This integer is used for determining the bucket location, when this object needs to be stored in some HashTable like data structure. 
+By default, Object’s hashCode() method returns and integer representation of memory address where object is stored.
+
+equals() method, as name suggest, is used to simply verify the equality of two objects. 
+Default implementation simply check the object references of two objects to verify their equality.
+
+2. Whenever a.equals(b), then a.hashCode() must be same as b.hashCode().
+
+3. How to Design Good Key for HashMap?
+Main Reason of HashMap is to retrieve the data without any failure. 
+By following the principle of immutable, we can design the good key for hashmap. 
+On runtime, JVM computes hash code for each object and provide it on demand. 
+When we modify an object’s state, JVM set a flag that object is modified and hash code must be AGAIN computed. 
+So, next time we call object’s hashCode() method, JVM recalculate the hash code for that object.
+For this basic reasoning, key objects are suggested to be IMMUTABLE. IMMUTABILITY allows you to get same hash code every time, for a key object. So it actually solves most of the problems in one go. 
+Also, this class must honor the hashCode() and equals() methods contract.
+
+4. How to make class immutable?
+By overridig equals() and hashCode()
+
+5. Difference between HashMap and ConcurrentHashMap?
